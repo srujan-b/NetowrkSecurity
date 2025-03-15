@@ -1,0 +1,8 @@
+pandas
+numpy
+flask
+mlflow
+dvc
+dvc-s3
+python-dotenv
+pymongo
