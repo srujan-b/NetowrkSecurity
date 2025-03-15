@@ -5,6 +5,7 @@ mlflow
 dvc
 dvc-s3
 python-dotenv
+pymongo[srv]==3.6
 pymongo
 certifi
 

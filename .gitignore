@@ -1,2 +1,4 @@
 NetwEnv
 .env
+logs
+/exception/__pycache__
