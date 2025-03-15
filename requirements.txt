@@ -6,3 +6,6 @@ dvc
 dvc-s3
 python-dotenv
 pymongo
+certifi
+
+## -e .
