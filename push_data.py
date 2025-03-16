@@ -62,9 +62,3 @@ if __name__ == "__main__":
     print(records)
     noOfRecords =  networkObj.insert_data_mongodb(records,database,collection)    
     print(noOfRecords)
-
-        
-
-
-
-        

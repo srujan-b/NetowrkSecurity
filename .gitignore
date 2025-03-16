@@ -2,3 +2,5 @@ NetwEnv
 .env
 logs
 /exception/__pycache__
+Artificats\
+__pycache__
