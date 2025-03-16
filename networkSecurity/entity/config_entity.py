@@ -15,7 +15,7 @@ class DataIngestionConfig:
 
     def __init__(self,training_pipline_config:TrainingPiplineConfig):
         self.data_ingestion_dir:str = os.path.join(
-            training_pipline_config.artificat_dir,trainingPipeline.DATA_INGESTION_COLLECTION_NAME
+            training_pipline_config.artificat_dir,trainingPipeline.DATA_INGESTION_DIR_NAME
         )
         self.feature_store_file_path : str = os.path.join(
             self.data_ingestion_dir,trainingPipeline.DATA_INGESTION_FEATURE_STORE_DIR,trainingPipeline.FILE_NAME
@@ -61,4 +61,20 @@ class DataValidationConfig:
             trainingPipeline.DATA_VAL_DRIFT_REPORT_FILE_NAME,
         )
 
+class DataTransformationConfig:
+
+    def __init__(self,training_pipline_config:TrainingPiplineConfig):
+
+        self.data_transformation_dir: str = os.path.join(training_pipline_config.artificat_dir,trainingPipeline.DATA_TRANS_DIR_NAME)
+        self.transformed_train_file_path: str = os.path.join(self.data_transformation_dir,
+                                                             trainingPipeline.DATA_TRANS_TRANSFORMED_DATA_DIR,
+                                                             trainingPipeline.TRAIN_FILE_NAME.replace("csv","npy"))
+        
+        self.transformed_test_file_path: str = os.path.join(self.data_transformation_dir,
+                                                            trainingPipeline.DATA_TRANS_TRANSFORMED_DATA_DIR,
+                                                            trainingPipeline.TEST_FILE_NAME.replace("csv","npy"))
+        
+        self.transformed_object_file_path: str = os.path.join(self.data_transformation_dir,
+                                                              trainingPipeline.DATA_TRANS_TRANSFORMED_OBJECT_DIR,
+                                                              trainingPipeline.PREPROCESSING_OBJECT_FILE_NAME)
 
