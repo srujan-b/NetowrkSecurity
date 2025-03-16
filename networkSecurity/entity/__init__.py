@@ -1,2 +1,2 @@
-from .config_entity import TrainingPiplineConfig,DataIngestionConfig
-from .artificat_entity import DataIngestionArtifact
+from .config_entity import TrainingPiplineConfig,DataIngestionConfig,DataValidationConfig
+from .artificat_entity import DataIngestionArtifact ,DataValidationArtificat
