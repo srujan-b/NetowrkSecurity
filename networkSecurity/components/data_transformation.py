@@ -13,7 +13,7 @@ from networkSecurity.exception import NetworkSecurityException
 from networkSecurity.logging import logging
 from networkSecurity.utils import save_numpy_array,save_object
 
-class DatTransformation:
+class DataTransformation:
     def __init__(self,data_validation_artificat: DataValidationArtificat,
                  data_transforamtion_config: DataTransformationConfig):
         try:
@@ -65,8 +65,8 @@ class DatTransformation:
         try:
             logging.info("Starting the data transformation")
 
-            train_df = DatTransformation.read_data(self.data_validation_artificat.valid_train_file_path)
-            test_df = DatTransformation.read_data(self.data_validation_artificat.valid_test_file_path)
+            train_df = DataTransformation.read_data(self.data_validation_artificat.valid_train_file_path)
+            test_df = DataTransformation.read_data(self.data_validation_artificat.valid_test_file_path)
 
             ## Training dataframe
             input_feature_train_df = train_df.drop(columns=[TARGET_COLUMN],axis=1)
@@ -99,6 +99,8 @@ class DatTransformation:
                 transformed_train_file_path = self.data_transformation_config.transformed_train_file_path,
                 transformed_test_file_path = self.data_transformation_config.transformed_test_file_path
             )
+
+            return data_transformation_artificat
 
 
 
