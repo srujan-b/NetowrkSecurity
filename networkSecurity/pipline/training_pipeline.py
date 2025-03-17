@@ -78,7 +78,7 @@ class TrainingPipeline:
 
         except Exception as e:
             raise NetworkSecurityException(e,sys)
-    
+    print(" ")
     def sync_model_dir_to_s3(self):
 
         try:
