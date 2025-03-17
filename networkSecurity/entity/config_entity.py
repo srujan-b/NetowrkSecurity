@@ -9,6 +9,7 @@ class TrainingPiplineConfig:
         self.pipeline_name = trainingPipeline.PIPELINE_NAME
         self.artificat_name = trainingPipeline.ARTIFICAT_DIR
         self.artificat_dir = os.path.join(self.artificat_name,timestamp)
+        self.model_dir = os.path.join("final_model")
         self.timestamp: str=timestamp
         
 class DataIngestionConfig:
