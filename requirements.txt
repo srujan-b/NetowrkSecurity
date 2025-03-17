@@ -11,5 +11,6 @@ certifi
 scikit-learn
 dill
 pyaml
+dagshub
 
 ## -e .

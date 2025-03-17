@@ -13,6 +13,10 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import AdaBoostClassifier,GradientBoostingClassifier,RandomForestClassifier
 
+import dagshub
+dagshub.init(repo_owner='srujanb28', repo_name='NetowrkSecurity', mlflow=True)
+
+
 
 class ModelTrainer:
 
@@ -50,7 +54,7 @@ class ModelTrainer:
 
         params = {
             "Descision Tree":{
-                'criterion' : ['gini','entropy','log_loss'],
+                'criterion' : ['gini'],
                 # 'splitter': ['best','random']
                 # 'max_features' : ['sqrt', 'log2']
             
@@ -59,7 +63,7 @@ class ModelTrainer:
                 
                 # 'criterion' : ['gini','entropy','log_loss'],
                 # 'max_features' : ['sqrt', 'log2',None]
-                'n_estimators' : [8,16,32,64,128,256]
+                'n_estimators' : [8,16]
             },
             "Gradient Boosting":{
 
